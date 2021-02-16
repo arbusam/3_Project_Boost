@@ -271,11 +271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3617405013375092120, guid: 544421dac32f2452493acc72ea9a2835, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.45
+      value: 2.74
       objectReference: {fileID: 0}
     - target: {fileID: 3617405013375092120, guid: 544421dac32f2452493acc72ea9a2835, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.12
+      value: -24.06
       objectReference: {fileID: 0}
     - target: {fileID: 3617405013375092120, guid: 544421dac32f2452493acc72ea9a2835, type: 3}
       propertyPath: m_LocalRotation.w
@@ -375,10 +375,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2839742052875382010, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 43dd8a16f2c034b64a743c8bdb995283, type: 3}
     - target: {fileID: 6688383171372290364, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}
       propertyPath: m_Name
       value: Rocket Ship
@@ -427,5 +423,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6688383171426298885, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8625d19f6ade474c836122f93fb5781, type: 2}
+    - target: {fileID: 6688383171642678046, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8625d19f6ade474c836122f93fb5781, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}

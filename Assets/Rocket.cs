@@ -19,10 +19,23 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessInput();
+        Thrust();
+        Rotate();
     }
 
-    private void ProcessInput()
+    private void Rotate()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(Vector3.forward);
+        }
+        else if (Input.GetKey(KeyCode.D)) // Can not rotate Right and Left at the same time
+        {
+            transform.Rotate(-Vector3.forward);
+        }
+    }
+
+    private void Thrust()
     {
         if (Input.GetKey(KeyCode.Space)) // Can thrust while simultanisly rotating
         {
@@ -31,18 +44,10 @@ public class Rocket : MonoBehaviour
             {
                 audioSource.Play();
             }
-        } else
+        }
+        else
         {
             audioSource.Stop();
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(Vector3.forward);
-        }
-        else if (Input.GetKey(KeyCode.D)) // Can not rotate Right and Left at the same time
-        {
-            transform.Rotate(-Vector3.forward);
         }
     }
 }
