@@ -25,6 +25,8 @@ public class Rocket : MonoBehaviour
 
     private void Rotate()
     {
+        rigidbody.freezeRotation = true;
+
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.forward);
@@ -33,6 +35,8 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(-Vector3.forward);
         }
+
+        rigidbody.freezeRotation = false;
     }
 
     private void Thrust()
