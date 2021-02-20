@@ -22,6 +22,8 @@ public class Rocket : MonoBehaviour
     enum State { Alive, Dying, Transending }
     State state = State.Alive;
 
+    bool collisions = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,16 +39,20 @@ public class Rocket : MonoBehaviour
             RespondToThrustInput();
             RespondToRotateInput();
         }
+
+        if (Debug.isDebugBuild)
+        {
+            RespondToDebugKeys();
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive){ return; }
+        if (state != State.Alive || !collisions) { return; }
 
         switch (collision.gameObject.tag)
         {
             case "Friendly":
-                print("Ok");
                 break;
             case "Finish":
                 state = State.Transending;
@@ -72,7 +78,33 @@ public class Rocket : MonoBehaviour
 
     private void LoadNextScene()
     {
-        SceneManager.LoadScene(1);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = GetNextSceneIndex(currentSceneIndex);
+        SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    private int GetNextSceneIndex(int currentIndex)
+    {
+        if (currentIndex != 4)
+        {
+            return currentIndex + 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    private void RespondToDebugKeys()
+    {
+        if (Input.GetKey(KeyCode.L))
+        {
+            LoadNextScene();
+        }
+        else if (Input.GetKey(KeyCode.C))
+        {
+            collisions = !collisions;
+        }
     }
 
     private void RespondToRotateInput()
@@ -96,7 +128,7 @@ public class Rocket : MonoBehaviour
     private void RespondToThrustInput()
     {
 
-        if (Input.GetKey(KeyCode.Space)) // Can thrust while simultanisly rotating
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) // Can thrust while simultanisly rotating
         {
             ApplyThrust();
         }
