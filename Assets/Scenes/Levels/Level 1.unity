@@ -919,14 +919,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1681824950, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}
-      propertyPath: m_SpotAngle
-      value: 22.088577
-      objectReference: {fileID: 0}
-    - target: {fileID: 1681824950, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 21.274965
-      objectReference: {fileID: 0}
     - target: {fileID: 6688383171372290364, guid: 18eb84f0ba9e34aef9f08ce142bf3e88, type: 3}
       propertyPath: m_Name
       value: Rocket Ship

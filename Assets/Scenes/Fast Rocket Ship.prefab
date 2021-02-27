@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 8901917770926197246}
   - component: {fileID: 13744288000357435}
   m_Layer: 0
-  m_Name: Rocket Ship 1
+  m_Name: Fast Rocket Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,6 +365,102 @@ MonoBehaviour:
   mainEngineParticles: {fileID: 51830268514513096}
   crashParticles: {fileID: 3417459454842562245}
   completeLevelParticles: {fileID: 3706754216215705284}
+  fireAction:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dc650089-2db6-4fc8-8d1e-b9782eb04246
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+  rotateAction:
+    m_Name: Rotate
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 3000d684-7308-42cf-97e9-a183eca35143
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: Keyboard
+      m_Id: 26e6cb22-4611-495c-9125-6c3dda4064ad
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 60ab920d-ca4c-46ad-9def-5c14f1ad7dda
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 67489eaf-14ca-43fd-b949-9e6a1f07dc7d
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 44dbe3af-d802-4a90-b565-8cfa0c8f5014
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: right
+      m_Id: bcc13680-8cb4-4d0b-bf0f-b25c40b9b9eb
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: Controller
+      m_Id: 595251a0-1306-4706-8810-8727ac6978a3
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 44eba52d-b978-4e24-807e-c09a6cb6f9d2
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 35779aa5-c142-444e-aa38-fce02d1aa4e8
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 780bec2a-ac2d-4a71-b23b-994381a9fd0c
+      m_Path: <HID::Unknown Joy-Con (L)>/button5
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 0c2577a6-d597-4107-8a11-aa29bc0ed382
+      m_Path: <HID::Unknown Joy-Con (L)>/button6
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
 --- !u!1 &13744288038619422
 GameObject:
   m_ObjectHideFlags: 0

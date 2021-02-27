@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Rocket : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Rocket : MonoBehaviour
     [SerializeField] ParticleSystem mainEngineParticles;
     [SerializeField] ParticleSystem crashParticles;
     [SerializeField] ParticleSystem completeLevelParticles;
+
+    [SerializeField] InputAction fireAction;
+    [SerializeField] InputAction rotateAction;
 
     new Rigidbody rigidbody;
     AudioSource audioSource;
@@ -44,6 +48,18 @@ public class Rocket : MonoBehaviour
         {
             RespondToDebugKeys();
         }
+    }
+
+    void OnEnable()
+    {
+        fireAction.Enable();
+        rotateAction.Enable();
+    }
+
+    void OnDisable()
+    {
+        fireAction.Disable();
+        rotateAction.Disable();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -109,15 +125,18 @@ public class Rocket : MonoBehaviour
 
     private void RespondToRotateInput()
     {
+
+        float rotation = rotateAction.ReadValue<Vector2>().x;
+
         rigidbody.angularVelocity = Vector3.zero;
 
         float rotationThisFrame = rcsThrust * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || rotation < 0)
         {
             transform.Rotate(Vector3.forward * rotationThisFrame);
         }
-        else if (Input.GetKey(KeyCode.D)) // Can not rotate Right and Left at the same time
+        else if (Input.GetKey(KeyCode.D) || rotation > 0) // Can not rotate Right and Left at the same time
         {
             transform.Rotate(-Vector3.forward * rotationThisFrame);
         }
@@ -126,7 +145,7 @@ public class Rocket : MonoBehaviour
     private void RespondToThrustInput()
     {
 
-        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) // Can thrust while simultanisly rotating
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.JoystickButton1)) // Can thrust while simultanisly rotating
         {
             ApplyThrust();
         }
