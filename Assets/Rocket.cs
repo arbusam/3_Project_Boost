@@ -82,14 +82,14 @@ public class Rocket : MonoBehaviour
                 audioSource.Stop();
                 audioSource.PlayOneShot(crash);
                 crashParticles.Play();
-                Invoke("LoadFirstScene", delay);
+                Invoke("RestartScene", delay);
                 break;
         }
     }
 
-    private void LoadFirstScene()
+    private void RestartScene()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void LoadNextScene()
@@ -101,7 +101,7 @@ public class Rocket : MonoBehaviour
 
     private int GetNextSceneIndex(int currentIndex)
     {
-        if (currentIndex != 4)
+        if (currentIndex != 5)
         {
             return currentIndex + 1;
         }
