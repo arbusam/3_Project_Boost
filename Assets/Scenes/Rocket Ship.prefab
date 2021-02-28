@@ -538,7 +538,7 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Rotate
       m_Flags: 8
-    - m_Name: Controller
+    - m_Name: Joy-Con(L)
       m_Id: 595251a0-1306-4706-8810-8727ac6978a3
       m_Path: 2DVector
       m_Interactions: 
@@ -573,6 +573,86 @@ MonoBehaviour:
     - m_Name: right
       m_Id: 0c2577a6-d597-4107-8a11-aa29bc0ed382
       m_Path: <HID::Unknown Joy-Con (L)>/button6
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: Joy-Con(R)
+      m_Id: 9e08678f-3beb-4626-885e-fe67593a5cc3
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 404a316f-c885-435a-b7b3-daf81ac4997f
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 58f979a2-66d6-4f7b-bd5d-2b79faebb0bc
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 6742a829-bb21-4756-b1fb-ac40985f4f0a
+      m_Path: <HID::Unknown Joy-Con (R)>/button5
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: right
+      m_Id: f3774b11-31d0-43de-ad50-1d5033fcf367
+      m_Path: <HID::Unknown Joy-Con (R)>/button6
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: Controller
+      m_Id: ca611537-a90b-4a6e-a3ca-e8b14ae434f9
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 4
+    - m_Name: up
+      m_Id: f36878bb-db86-49e4-a55b-32289482ddac
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 08849a3b-f243-45f4-aec2-44386594a84b
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: left
+      m_Id: a4471fc3-48e3-48d7-91b0-8f569c32af04
+      m_Path: <Gamepad>/leftTrigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Rotate
+      m_Flags: 8
+    - m_Name: right
+      m_Id: a11c3cdf-9bd0-40ef-b334-34f6fa2a6a0c
+      m_Path: <Gamepad>/rightTrigger
       m_Interactions: 
       m_Processors: 
       m_Groups: 
