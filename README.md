@@ -1,6 +1,6 @@
 # Project Boost
 
-This is my game made with Unity called Project Boost.
+This is my game made with Unity called Project Boost. Download latest version [here](https://github.com/arbusam/3_Project_Boost/releases).
 
 ## How to Play
 
